@@ -1,0 +1,54 @@
+[
+    {
+        "title": "House of Cards",
+        "created_by": "Beau Willimon",
+        "genre": [
+            "Political drama"
+        ],
+        "premiere": {
+            "date": "2013-02-01",
+            "dateStr": "February 2, 2013"
+        },
+        "seasons": 6,
+        "episodes": 73,
+        "runtime": "42-59min",
+        "streaming_service": [
+            "Netflix"
+        ]
+    },
+    {
+        "title": "Ozark",
+        "created_by": "",
+        "genre": [
+            "Crime drama"
+        ],
+        "premiere": {
+            "date": "2017-06-21",
+            "date_string": "July 21, 2017"
+        },
+        "seasons": 3,
+        "episodes": 30,
+        "runtime": "52-80min",
+        "streaming_service": [
+            "Netflix"
+        ]
+    },
+    {
+        "title": "Stranger Things",
+        "created_by": "The Duffer Brothers",
+        "genre": [
+            "Science fiction",
+            "Horror"
+        ],
+        "premiere": {
+            "date": "2016-06-15",
+            "date_string": "July 15, 2016"
+        },
+        "seasons": 3,
+        "episodes": 25,
+        "runtime": "42-78min",
+        "streaming_service": [
+            "Netflix"
+        ]
+    }
+]

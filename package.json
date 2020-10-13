@@ -1,0 +1,34 @@
+{
+  "name": "what-to-watch",
+  "version": "1.0.0",
+  "description": "A collection of enjoyable tv shows and series. Built with 11ty",
+  "main": ".eleventy.js",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "clean-css": "^4.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "eleventy build",
+    "serve": "eleventy --serve",
+    "debug": "DEBUG=* eleventy"
+  },
+  "keywords": [
+    "tv-show collection",
+    "11ty"
+  ],
+  "author": {
+    "name": "Tanner Dolby",
+    "email": "dolb.tanner@gmail.com",
+    "url": "https://tannerdolby.netlify.app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:tannerdolby/what-to-watch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tannerdolby/what-to-watch/issues"
+  },
+  "homepage": "https://github.com/tannerdolby/what-to-watch/",
+  "license": "ISC"
+}

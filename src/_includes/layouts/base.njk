@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta type="description" content="What to Watch, a collection of TV shows and series on popular streaming services.">
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <header class="main-nav">
+            <nav>
+                <a class="home-btn" href="/">Home</a>
+                <ul class="nav-list">
+                    <li><a href="/categories/">categories</a></li>
+                    <li><a href="https://github.com/tannerdolby/what-to-watch/blob/master/CONTRIBUTING.md">contribute</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="welcome-block">
+            <h1>{{ title }}</h1>
+            <div class="welcome-intro">
+                <h2>Need a new show?</h2>
+                <p>You've come to the right place. Have a look at the collection of series below. Enjoy!</p>
+            </div>
+        </div>
+        <main>
+            <h2 class="collection-heading">ALL SHOWS</h2>
+            <div class="shows-collection">
+        {% for show in collections.Series | reverse %}
+            <article class="show">
+                <h2>{{ show.data.title }}</h2>
+                <p style="margin-bottom: .5rem;"><em>Created {{ show.data.dateStr }}</em></p>
+                <div class="series-data" style="display: flex; justify-content: space-between;">
+                    <p>Seasons: {{ show.data.seasons }}</p>
+                    <p>Episodes: {{ show.data.episodes }}</p>
+                </div>
+                <ul style="padding-left: 1.5rem;">
+                    <li>Episode length: {{ show.data.runtime }}</li>
+                    <li>Streaming on {{ show.data.streamingService }}</li>
+                </ul>
+                <p><a class="link-to-wiki" href="{{show.data.url}}">Read more &RightArrow;</a></p>
+                <h3>Genres</h3>
+                <ul class="genre">
+                {% for genre in show.data.tags %}
+                    <li><a href="/categories#{{ genre | slug }}">{{ genre }}</a></li>
+                {% endfor %}
+                </ul>
+            </article>
+        {% endfor %}
+            </div>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="https://github.com/tannerdolby/what-to-watch/blob/master/README.md">About</a></li>
+                    <li><a href="https://github.com/tannerdolby/what-to-watch/blob/master/contributing.md">Contribute</a></li>
+                    <li><a href="https://github.com/tannerdolby/what-to-watch/blob/master/{{ page.inputPath }}/">Edit this page on Github</a></li>
+                </ul>
+            </nav>
+            &copy; 2020 Tanner Dolby. Built with Eleventy and contributions! 
+        </footer>
+    </body>
+</html>
