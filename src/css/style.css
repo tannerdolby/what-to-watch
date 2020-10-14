@@ -125,7 +125,7 @@ p {
 main {
     max-width: 1200px;
     padding: 0 1rem;
-    margin: 7rem auto;
+    margin: 10rem auto;
 }
 
 main .collection-heading {
@@ -252,10 +252,4 @@ footer nav ul li a {
 footer nav ul li a:hover {
     text-decoration: underline;
     text-decoration-color: var(--plum);
-}
-
-@media (max-width: 473px) {
-    .categories-main {
-        margin-top: 10rem;
-    }
 }
