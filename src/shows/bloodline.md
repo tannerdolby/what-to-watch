@@ -1,6 +1,6 @@
 ---
 title: Bloodline
-url: https://en.wikipedia.org/wiki/Ozark_(TV_series)
+url: https://en.wikipedia.org/wiki/Bloodline_(TV_series)
 permalink: "/shows/{{ title | slug }}/"
 createdBy: 
     - Todd A. Kessler
