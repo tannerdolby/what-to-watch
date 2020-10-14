@@ -16,8 +16,8 @@ module.exports = function(eleventyConfig) {
     ]);
 
     // Use Passthrough File Copy to include static assets in site output _site
-    eleventyConfig.addPassthroughCopy("/css/");
-    eleventyConfig.addPassthroughCopy("/images/");
+    eleventyConfig.addPassthroughCopy("./src/css/");
+    eleventyConfig.addPassthroughCopy("./src/images/");
 
     return {
         dir: {
