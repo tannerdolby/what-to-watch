@@ -11,12 +11,12 @@ A collection of shows and series to browse. Whenever you want to find a new show
 ## Contribute
 Have you ever been looking for a new Netflix series or TV show to watch? Hmm, me too. If you know of a really great show or series that's not currently on the site, feel free to contribute by adding the missing show data to `/shows/` as a `.md` file (ie `stranger-things.md`) with the appropiate show metadata. 
 
-Have a look at [CONTRIBUTING.md](https://github.com/tannerdolby/what-to-watch/CONTRIBUTING.md) for a guide on getting things setup before making a PR and adding your show to the site.
+Have a look at [CONTRIBUTING.md](https://github.com/tannerdolby/what-to-watch/blob/masterCONTRIBUTING.md) for a guide on getting things setup before making a PR and adding your show to the site.
 
 ### How to add a show
 Add your favorite TV show/series data as an object to the global data file `shows.json` to the `/shows/` directory. You can find the required data from any site but I recommend having a look at [Wiki - Netflix list of shows](https://en.wikipedia.org/wiki/List_of_Netflix_original_programming) or [Wiki - Hulu list of shows](https://en.wikipedia.org/wiki/List_of_Hulu_original_programming). 
 
-Please see [CONTRIBUTING.md](https://github.com/tannerdolby/what-to-watch/CONTRIBUTING.md) before submitting a PR or making changes in the project.
+Please see [CONTRIBUTING.md](https://github.com/tannerdolby/what-to-watch/blob/master/CONTRIBUTING.md) before submitting a PR or making changes in the project.
 
 Example: show data as front matter using [YAML](https://yaml.org/spec/1.2/spec.html) syntax
 
