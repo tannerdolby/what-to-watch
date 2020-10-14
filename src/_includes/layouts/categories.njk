@@ -52,6 +52,7 @@ defaultTags:
                             <li>Episode length: {{ show.data.runtime }}</li>
                             <li>Streaming on {{ show.data.streamingService }}</li>
                         </ul>
+                        <p><a class="link-to-wiki" href="{{ show.data.url }}">Read more &RightArrow;</a></p>
                         <h3>Genres</h3>
                         <ul class="genre">
                         {% for genre in show.data.tags %}
@@ -75,6 +76,7 @@ defaultTags:
                             <li>Episode length: {{ show.data.runtime }}</li>
                             <li>Streaming on {{ show.data.streamingService }}</li>
                         </ul>
+                        <p><a class="link-to-wiki" href="{{ show.data.url }}">Read more &RightArrow;</a></p>
                         <h3>Genres</h3>
                         <ul class="genre">
                         {% for genre in show.data.tags %}
@@ -98,6 +100,7 @@ defaultTags:
                         <li>Episode length: {{ show.data.runtime }}</li>
                         <li>Streaming on {{ show.data.streamingService }}</li>
                     </ul>
+                    <p><a class="link-to-wiki" href="{{ show.data.url }}">Read more &RightArrow;</a></p>
                     <h3>Genres</h3>
                     <ul class="genre">
                     {% for genre in show.data.tags %}
@@ -121,6 +124,7 @@ defaultTags:
                         <li>Episode length: {{ show.data.runtime }}</li>
                         <li>Streaming on {{ show.data.streamingService }}</li>
                     </ul>
+                    <p><a class="link-to-wiki" href="{{ show.data.url }}">Read more &RightArrow;</a></p>
                     <h3>Genres</h3>
                     <ul class="genre">
                     {% for genre in show.data.tags %}
@@ -144,6 +148,7 @@ defaultTags:
                         <li>Episode length: {{ show.data.runtime }}</li>
                         <li>Streaming on {{ show.data.streamingService }}</li>
                     </ul>
+                    <p><a class="link-to-wiki" href="{{ show.data.url }}">Read more &RightArrow;</a></p>
                     <h3>Genres</h3>
                     <ul class="genre">
                     {% for genre in show.data.tags %}
@@ -167,6 +172,7 @@ defaultTags:
                         <li>Episode length: {{ show.data.runtime }}</li>
                         <li>Streaming on {{ show.data.streamingService }}</li>
                     </ul>
+                    <p><a class="link-to-wiki" href="{{ show.data.url }}">Read more &RightArrow;</a></p>
                     <h3>Genres</h3>
                     <ul class="genre">
                     {% for genre in show.data.tags %}
@@ -175,6 +181,30 @@ defaultTags:
                     </ul>
                 </article>
             {% endfor %}
+            </div>
+            <h2 id="crime">Crime</h2>
+            <div class="shows-collection">
+                {% for show in collections.Crime | reverse %}
+                    <article class="show">
+                        <h2>{{ show.data.title }}</h2>
+                        <p style="margin-bottom: .5rem;"><em>Created {{ show.data.dateStr }}</em></p>
+                        <div class="series-data" style="display: flex; justify-content: space-between;">
+                            <p>Seasons: {{ show.data.seasons }}</p>
+                            <p>Episodes: {{ show.data.episodes }}</p>
+                        </div>
+                        <ul style="padding-left: 1.5rem;">
+                            <li>Episode length: {{ show.data.runtime }}</li>
+                            <li>Streaming on {{ show.data.streamingService }}</li>
+                        </ul>
+                        <p><a class="link-to-wiki" href="{{ show.data.url }}">Read more &RightArrow;</a></p>
+                        <h3>Genres</h3>
+                        <ul class="genre">
+                        {% for genre in show.data.tags %}
+                             <li><a href="/categories#{{ genre | slug }}">{{ genre }}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </article>
+                {% endfor %}
             </div>
             <h2 id="action">Action</h2>
             <div class="shows-collection">
@@ -190,6 +220,7 @@ defaultTags:
                         <li>Episode length: {{ show.data.runtime }}</li>
                         <li>Streaming on {{ show.data.streamingService }}</li>
                     </ul>
+                    <p><a class="link-to-wiki" href="{{ show.data.url }}">Read more &RightArrow;</a></p>
                     <h3>Genres</h3>
                     <ul class="genre">
                     {% for genre in show.data.tags %}
@@ -213,6 +244,7 @@ defaultTags:
                         <li>Episode length: {{ show.data.runtime }}</li>
                         <li>Streaming on {{ show.data.streamingService }}</li>
                     </ul>
+                    <p><a class="link-to-wiki" href="{{ show.data.url }}">Read more &RightArrow;</a></p>
                     <h3>Genres</h3>
                     <ul class="genre">
                     {% for genre in show.data.tags %}
@@ -236,6 +268,7 @@ defaultTags:
                         <li>Episode length: {{ show.data.runtime }}</li>
                         <li>Streaming on {{ show.data.streamingService }}</li>
                     </ul>
+                    <p><a class="link-to-wiki" href="{{ show.data.url }}">Read more &RightArrow;</a></p>
                     <h3>Genres</h3>
                     <ul class="genre">
                     {% for genre in show.data.tags %}

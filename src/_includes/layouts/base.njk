@@ -40,7 +40,7 @@
                     <li>Episode length: {{ show.data.runtime }}</li>
                     <li>Streaming on {{ show.data.streamingService }}</li>
                 </ul>
-                <p><a class="link-to-wiki" href="{{show.data.url}}">Read more &RightArrow;</a></p>
+                <p><a class="link-to-wiki" href="{{ show.data.url }}">Read more &RightArrow;</a></p>
                 <h3>Genres</h3>
                 <ul class="genre">
                 {% for genre in show.data.tags %}
@@ -55,7 +55,7 @@
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="https://github.com/tannerdolby/what-to-watch/blob/master/README.md">About</a></li>
+                    <li><a href="/https://github.com/tannerdolby/what-to-watch/blob/master/README.md">About</a></li>
                     <li><a href="https://github.com/tannerdolby/what-to-watch/blob/master/contributing.md">Contribute</a></li>
                     <li><a href="https://github.com/tannerdolby/what-to-watch/blob/master/{{ page.inputPath }}/">Edit this page on Github</a></li>
                 </ul>
