@@ -5,7 +5,7 @@ permalink: "/shows/{{ title | slug }}/"
 createdBy:
    - Aaron Guzikowski
 tags:
-   - Science Fiction
+   - Science_fiction
    - Drama
    - Series
 date: 2020-09-03
