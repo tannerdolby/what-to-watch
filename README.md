@@ -20,7 +20,7 @@ Please see [CONTRIBUTING.md](https://github.com/tannerdolby/what-to-watch/blob/m
 
 Example: show data as front matter using [YAML](https://yaml.org/spec/1.2/spec.html) syntax
 
-filename: stranger-things.md
+filename: `stranger-things.md`
 ```
 ---
 title: Stranger Things
