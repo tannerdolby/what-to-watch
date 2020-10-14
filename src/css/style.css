@@ -15,7 +15,7 @@ body {
 
 
 h1 {
-    --min-size: 2.5rem;
+    --min-size: 3rem;
     --pref-size: 10vw;
     --max-size: 4.25rem;
     font-size: clamp(var(--min-size), var(--pref-size), var(--max-size));
