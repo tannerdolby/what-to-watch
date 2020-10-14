@@ -9,6 +9,9 @@ defaultTags:
     - Mystery
     - Thriller
     - Science fiction
+    - Spy
+    - Adult animation
+    - Animated sitcom
 ---
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -233,6 +236,30 @@ defaultTags:
                 </article>
             {% endfor %}
             </div>
+            <h2 id="spy">Spy</h2>
+            <div class="shows-collection">
+                {% for show in collections.Spy | reverse %}
+                    <article class="show">
+                        <h2>{{ show.data.title }}</h2>
+                        <p style="margin-bottom: .5rem;"><em>Created {{ show.data.dateStr }}</em></p>
+                        <div class="series-data" style="display: flex; justify-content: space-between;">
+                            <p>Seasons: {{ show.data.seasons }}</p>
+                            <p>Episodes: {{ show.data.episodes }}</p>
+                        </div>
+                        <ul style="padding-left: 1.5rem;">
+                            <li>Episode length: {{ show.data.runtime }}</li>
+                            <li>Streaming on {{ show.data.streamingService }}</li>
+                        </ul>
+                        <p><a class="link-to-wiki" href="{{ show.data.url }}">Read more &RightArrow;</a></p>
+                        <h3>Genres</h3>
+                        <ul class="genre">
+                        {% for genre in show.data.tags %}
+                             <li><a href="/categories#{{ genre | slug }}">{{ genre }}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </article>
+                {% endfor %}
+                </div>
             <h2 id="adventure">Adventure</h2>
             <div class="shows-collection">
             {% for show in collections.Adventure | reverse %}
@@ -257,6 +284,55 @@ defaultTags:
                 </article>
             {% endfor %}
             </div>
+            <h2 id="adult_animation">Adult animation</h2>
+            <div class="shows-collection">
+            {% for show in collections.Adult_animation | reverse %}
+                <article class="show">
+                    <h2>{{ show.data.title }}</h2>
+                    <p style="margin-bottom: .5rem;"><em>Created {{ show.data.dateStr }}</em></p>
+                    <div class="series-data" style="display: flex; justify-content: space-between;">
+                        <p>Seasons: {{ show.data.seasons }}</p>
+                        <p>Episodes: {{ show.data.episodes }}</p>
+                    </div>
+                    <ul style="padding-left: 1.5rem;">
+                        <li>Episode length: {{ show.data.runtime }}</li>
+                        <li>Streaming on {{ show.data.streamingService }}</li>
+                    </ul>
+                    <p><a class="link-to-wiki" href="{{ show.data.url }}">Read more &RightArrow;</a></p>
+                    <h3>Genres</h3>
+                    <ul class="genre">
+                    {% for genre in show.data.tags %}
+                        <li><a href="/categories/#{{ genre | slug }}">{{ genre }}</a></li>
+                    {% endfor %}
+                    </ul>
+                </article>
+            {% endfor %}
+            </div>
+            <h2 id="animated_sitcom">Animated sitcom</h2>
+            <div class="shows-collection">
+            {% for show in collections.Animated_sitcom | reverse %}
+                <article class="show">
+                    <h2>{{ show.data.title }}</h2>
+                    <p style="margin-bottom: .5rem;"><em>Created {{ show.data.dateStr }}</em></p>
+                    <div class="series-data" style="display: flex; justify-content: space-between;">
+                        <p>Seasons: {{ show.data.seasons }}</p>
+                        <p>Episodes: {{ show.data.episodes }}</p>
+                    </div>
+                    <ul style="padding-left: 1.5rem;">
+                        <li>Episode length: {{ show.data.runtime }}</li>
+                        <li>Streaming on {{ show.data.streamingService }}</li>
+                    </ul>
+                    <p><a class="link-to-wiki" href="{{ show.data.url }}">Read more &RightArrow;</a></p>
+                    <h3>Genres</h3>
+                    <ul class="genre">
+                    {% for genre in show.data.tags %}
+                        <li><a href="/categories/#{{ genre | slug }}">{{ genre }}</a></li>
+                    {% endfor %}
+                    </ul>
+                </article>
+            {% endfor %}
+            </div>
+            
             <h2 id="series">All Series</h2>
             <div class="shows-collection">
             {% for show in collections.Series | reverse %}
