@@ -1,4 +1,5 @@
-# Contributing to what-to-watch
+# How to contribute
+
 If your new to open source, welcome! This contributing file will provide a more in depth step-by-step guide of contributing to this project. Also, I recommend you have a look at [Wiki - Netflix List of Shows](https://en.wikipedia.org/wiki/List_of_Netflix_original_programming) and [Wiki - Hulu List of Shows](https://en.wikipedia.org/wiki/List_of_Hulu_original_programming) for easily finding and adding show metadata! Please only add shows to the collection **with appropiate** titles!
 
 ## Local Setup
@@ -61,7 +62,7 @@ streamingService:
 ---
 ```
 
-Make sure to follow the same format as I've shown above, using title case for the tags list values. Please include all the genres for a show in the `tags` list! The `permalink` scalar MUST be `permalink: "/shows/{{ title | slug}}/" so please make sure it is this exact value.
+Make sure to follow the same format as I've shown above, using title case for the tags list values. Please include all the genres for a show in the `tags` list! The `permalink` scalar MUST be `permalink: "/shows/{{ title | slug}}/"` so please make sure it is this exact value.
 
 Stranger things is labeled in the "Drama" section and has the Science fiction + Horror tags. If a genre is more than one word please use snake_case. Also, **ALL SHOWS** in the collection will have the `Series` tag added, please don't forget this or I will have to update it.
 
