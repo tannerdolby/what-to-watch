@@ -1,5 +1,5 @@
 # What to Watch
-A collection of shows and series. Whenever you want to find a new show, give this site a look and maybe you'll uncover a new show your interested in watching. Built with Eleventy.
+A collection of shows and series to browse. Whenever you want to find a new show, give this site a look and maybe you'll uncover a new series your interested in watching. Built with Eleventy.
 
 ## Local setup
 1. Fork this project to your users organization
