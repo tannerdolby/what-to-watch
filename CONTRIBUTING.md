@@ -39,7 +39,8 @@ Now your all set to create a Markdown file and add your shows metadata as [front
 ## Create your shows markdown file in the `/shows/` directory and add metadata
 After you've created a Markdown file with the appropiate naming convention. It's time to add the shows metadata as front matter, which uses a [YAML](https://yaml.org/spec/1.2/spec.html) syntax.
 
-Example file: `stranger-things.md` & full file path `/src/shows/stranger-things.md`
+Example file: `stranger-things.md`
+- Full path from root: `/src/shows/stranger-things.md`
 ```
 ---
 title: Stranger Things
@@ -64,7 +65,7 @@ streamingService:
 
 Make sure to follow the same format as I've shown above, using title case for the tags list values. Please include all the genres for a show in the `tags` list! The `permalink` scalar MUST be `permalink: "/shows/{{ title | slug}}/"` so please make sure it is this exact value.
 
-Stranger things is labeled in the "Drama" section and has the Science fiction + Horror tags. If a genre is more than one word please use snake_case. Also, **ALL SHOWS** in the collection will have the `Series` tag added, please don't forget this or I will have to update it.
+Stranger things is labeled in the "Drama" section and has the Science fiction + Horror tags. If a genre is more than one word please use snake_case.
 
 
 4. After you've added your markdown file to the `/shows/` directory, add your changes to the staging area with `git add <filename>` or simply `git add .` to add all changed files in the directory to the staging area. 
