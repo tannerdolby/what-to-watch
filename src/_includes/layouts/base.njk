@@ -31,7 +31,7 @@
         <main>
             <h2 class="collection-heading">ALL SHOWS</h2>
             <div class="shows-collection">
-        {% for show in collections.Series | reverse %}
+        {% for show in collections.shows | reverse %}
             <article class="show">
                 <h2>{{ show.data.title }}</h2>
                 <p style="margin-bottom: .5rem;"><em>Created {{ show.data.dateStr }}</em></p>

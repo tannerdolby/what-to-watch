@@ -287,7 +287,7 @@ defaultTags:
             </div>
             <h2 id="sitcom">Sitcom</h2>
             <div class="shows-collection">
-            {% for show in collections.Sitcom| reverse %}
+            {% for show in collections.Sitcom | reverse %}
                 <article class="show">
                     <h2>{{ show.data.title }}</h2>
                     <p style="margin-bottom: .5rem;"><em>Created {{ show.data.dateStr }}</em></p>
@@ -360,7 +360,7 @@ defaultTags:
             
             <h2 id="series">All Series</h2>
             <div class="shows-collection">
-            {% for show in collections.Series | reverse %}
+            {% for show in collections.shows | reverse %}
                 <article class="show">
                     <h2>{{ show.data.title }}</h2>
                     <p style="margin-bottom: .5rem;"><em>Created {{ show.data.dateStr }}</em></p>
