@@ -8,7 +8,6 @@ createdBy:
 tags: 
     - Crime
     - Drama
-    - Series
 date: 2017-06-21
 dateStr: July 21, 2017
 seasons: 3

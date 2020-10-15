@@ -9,7 +9,6 @@ tags:
     - Mystery
     - Science_fiction
     - Drama
-    - Series
 date: 2013-02-01
 dateStr: Februrary 02, 2013
 seasons: 6

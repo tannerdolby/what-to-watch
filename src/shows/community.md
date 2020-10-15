@@ -7,7 +7,6 @@ createdBy:
 tags:
     - Comedy
     - Sitcom
-    - Series
 date: 2009-17-09
 dateStr: September 17, 2009
 seasons: 6

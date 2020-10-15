@@ -7,7 +7,6 @@ createdBy:
 tags:
    - Science_fiction
    - Drama
-   - Series
 date: 2020-09-03
 dateStr: September 3, 2020
 seasons: 1

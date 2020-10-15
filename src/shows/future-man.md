@@ -9,7 +9,6 @@ tags:
     - Comedy
     - Science_fiction
     - Action
-    - Series
 date: 2017-11-14
 dateStr: November 14, 2017
 seasons: 3

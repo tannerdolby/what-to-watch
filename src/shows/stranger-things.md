@@ -8,7 +8,6 @@ tags:
     - Science_fiction
     - Horror
     - Drama
-    - Series
 date: 2016-15-06
 dateStr: July 15, 2016
 seasons: 3

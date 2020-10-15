@@ -9,7 +9,6 @@ createdBy:
 tags: 
     - Thriller
     - Drama
-    - Series
 date: 2015-02-09
 dateStr: February 09, 2015
 seasons: 3
