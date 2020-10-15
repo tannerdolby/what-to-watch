@@ -39,8 +39,9 @@ Now your all set to create a Markdown file and add your shows metadata as [front
 ## Create your shows markdown file in the `/shows/` directory and add metadata
 After you've created a Markdown file with the appropiate naming convention. It's time to add the shows metadata as front matter, which uses a [YAML](https://yaml.org/spec/1.2/spec.html) syntax.
 
-Example file: `stranger-things.md`
 - Full path from root: `/src/shows/stranger-things.md`
+
+Example file: `stranger-things.md`
 ```
 ---
 title: Stranger Things
