@@ -36,9 +36,9 @@ h2 {
 }
 
 p {
-    --min-size: 15px;
-    --pref-size: 16px;
-    --max-size: 18px;
+    --min-size: 1rem;
+    --pref-size: 1.1rem;
+    --max-size: 1.125rem;
     font-size: clamp(var(--min-size), var(--pref-size), var(--max-size));
 }
 
