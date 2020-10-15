@@ -15,6 +15,11 @@ module.exports = function(eleventyConfig) {
         "njk"
     ]);
 
+    // Create custom collection for shows
+    eleventyConfig.addCollection("shows", function(collection) {
+        return collection.getFilteredByGlob("src/shows/*.md");
+    });
+
     // Use Passthrough File Copy to include static assets in site output _site
     eleventyConfig.addPassthroughCopy("./src/css/");
     eleventyConfig.addPassthroughCopy("./src/images/");
