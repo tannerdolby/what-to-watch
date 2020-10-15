@@ -13,6 +13,6 @@ dateStr: September 3, 2020
 seasons: 1
 episodes: 10
 runtime: 42-55min
-streamingServices:
+streamingService:
    - HBO Max
 ---
