@@ -183,7 +183,7 @@ main .collection-heading {
     padding: .45rem .45rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-size: clamp(.9rem, 3vw, 1rem);
+    font-size: clamp(.9rem, 3vw, 1.0625rem);
     border: 1px solid var(--yellow-green);
 }
 
