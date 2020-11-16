@@ -23,17 +23,20 @@
             </nav>
         </header>
         <div class="welcome-block">
-            <h1 style="margin-top: 3rem;">{{ title }}</h1>
+            <h1 style="margin-top: 3rem;">What to Watch</h1>
             <div class="welcome-intro">
                 <h2>Need a new show?</h2>
                 <p>You've come to the right place. Have a look at the collection of series below. Enjoy!</p>
             </div>
         </div>
         <main>
-            <h2 class="collection-heading">ALL SHOWS</h2>
+            <h2 class="collection-heading">Search the Collection</h2>
+            <label for="search-bar" class="sr-only">Search Site</label>
+            <input type="text" name="search" id="search-bar" placeholder="Search...">
+            <p id="log" class="sr-only" aria-hidden="true"></p>
             <div class="shows-collection">
         {% for show in collections.shows | reverse %}
-            <article class="show">
+            <article class="show" data-show-title="{{ show.data.title }}">
                 <h2>{{ show.data.title }}</h2>
                 <p style="margin-bottom: .5rem;"><em>Created {{ show.data.dateStr }}</em></p>
                 <div class="series-data" style="display: flex; justify-content: space-between;">
@@ -66,5 +69,55 @@
             </nav>
             &copy; 2020 Tanner Dolby. Built with Eleventy and contributions! 
         </footer>
+        <script>
+            const shows = [...document.getElementsByClassName("show")];
+            const searchBar = document.getElementById("search-bar");
+            const log = document.getElementById("log");
+
+            /**
+            * Returns the text entered into an input search bar and injects it into an HTML element.
+            * @param {Event} e The `input` event to capturecharacters entered into input field.
+            * @retun {String} The text content injected into whatever element you choose.
+            */
+            function capture(e, element) {
+                return element.textContent = e.target.value;
+            }
+
+            searchBar.addEventListener("input", (e) => {
+                // Grab blog posts on document and convert HTMLCollection to an Array with the spread operator
+                const shows = [...document.getElementsByClassName("show")];
+
+                // inject user input to HTMLElement to add into search query
+                capture(e, log);
+
+                var searchQuery = [];
+                searchQuery.push(log.innerHTML.toLowerCase());
+
+                // posts with title that matches each character in search query
+                const matchingShow = shows.filter((show) => {
+                    return show.dataset.showTitle.toLowerCase().includes(searchQuery);
+                });
+
+                // posts with title that does not match the search query
+                const nonMatchingShow = shows.filter((show) => {
+                    return show.dataset.showTitle.toLowerCase().includes(searchQuery) === false;
+                });
+                
+                // If there is a matching post then hide non-matching posts
+                // else if a non matching (previously hidden) post still has sr-only, remove it
+                if (matchingShow) {
+                    nonMatchingShow.forEach(show => show.classList.add("sr-only"));
+                } else {
+                    nonMatchingShow.forEach(show => show.classList.remove("sr-only"));
+                }
+
+                // If the matching post is hidden from a previous query and matches search query, show it
+                matchingShow.forEach(show => {
+                    if (show.classList.value.includes("sr-only")) {
+                        show.classList.remove("sr-only");
+                    }
+                });
+            });
+        </script>
     </body>
 </html>

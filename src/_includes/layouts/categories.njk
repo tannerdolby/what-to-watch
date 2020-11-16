@@ -32,8 +32,9 @@ defaultTags:
             <nav>
                 <a class="home-btn" href="/">Home</a>
                 <ul class="nav-list">
-                    <li><a href="/categories/">categories</a></li>
-                    <li><a href="https://github.com/tannerdolby/what-to-watch/blob/master/CONTRIBUTING.md">contribute</a></li>
+                    <li><a href="/categories/">Categories</a></li>
+                    <li><a href="/search/">Search</a></li>
+                    <li><a href="https://github.com/tannerdolby/what-to-watch/blob/master/CONTRIBUTING.md">Contribute</a></li>
                 </ul>
             </nav>
         </header>
@@ -45,6 +46,11 @@ defaultTags:
             </div>
         </div>
         <main class="categories-main">
+            <ul class="category-list">
+            {% for genre in defaultTags %}
+                <li><a href="#{{ genre | lower }}">{{ genre }}</a></li>
+            {% endfor %}
+            </ul>
             <h2 id="drama">Drama</h2>
             <div class="shows-collection">
                 {% for show in collections.Drama | reverse %}
@@ -63,7 +69,7 @@ defaultTags:
                         <h3>Genres</h3>
                         <ul class="genre">
                         {% for genre in show.data.tags %}
-                             <li><a href="/categories#{{ genre | slug }}">{{ genre }}</a></li>
+                             <li><a href="/categories#{{ genre | slug }}">{{ genre | cleanup  }}</a></li>
                         {% endfor %}
                         </ul>
                     </article>
@@ -87,7 +93,7 @@ defaultTags:
                         <h3>Genres</h3>
                         <ul class="genre">
                         {% for genre in show.data.tags %}
-                             <li><a href="/categories#{{ genre | slug }}">{{ genre }}</a></li>
+                             <li><a href="/categories#{{ genre | slug }}">{{ genre | cleanup  }}</a></li>
                         {% endfor %}
                         </ul>
                     </article>
@@ -111,7 +117,7 @@ defaultTags:
                     <h3>Genres</h3>
                     <ul class="genre">
                     {% for genre in show.data.tags %}
-                         <li><a href="/categories#{{ genre | slug }}">{{ genre }}</a></li>
+                         <li><a href="/categories#{{ genre | slug }}">{{ genre | cleanup  }}</a></li>
                     {% endfor %}
                     </ul>
                 </article>
@@ -135,7 +141,7 @@ defaultTags:
                     <h3>Genres</h3>
                     <ul class="genre">
                     {% for genre in show.data.tags %}
-                         <li><a href="/categories#{{ genre | slug }}">{{ genre }}</a></li>
+                         <li><a href="/categories#{{ genre | slug }}">{{ genre | cleanup  }}</a></li>
                     {% endfor %}
                     </ul>
                 </article>
@@ -159,7 +165,7 @@ defaultTags:
                     <h3>Genres</h3>
                     <ul class="genre">
                     {% for genre in show.data.tags %}
-                        <li><a href="/categories/#{{ genre | slug }}">{{ genre }}</a></li>
+                        <li><a href="/categories/#{{ genre | slug }}">{{ genre | cleanup  }}</a></li>
                     {% endfor %}
                     </ul>
                 </article>
@@ -183,7 +189,7 @@ defaultTags:
                     <h3>Genres</h3>
                     <ul class="genre">
                     {% for genre in show.data.tags %}
-                         <li><a href="/categories#{{ genre | slug }}">{{ genre }}</a></li>
+                         <li><a href="/categories#{{ genre | slug }}">{{ genre | cleanup  }}</a></li>
                     {% endfor %}
                     </ul>
                 </article>
@@ -207,7 +213,7 @@ defaultTags:
                         <h3>Genres</h3>
                         <ul class="genre">
                         {% for genre in show.data.tags %}
-                             <li><a href="/categories#{{ genre | slug }}">{{ genre }}</a></li>
+                             <li><a href="/categories#{{ genre | slug }}">{{ genre | cleanup  }}</a></li>
                         {% endfor %}
                         </ul>
                     </article>
@@ -231,7 +237,7 @@ defaultTags:
                     <h3>Genres</h3>
                     <ul class="genre">
                     {% for genre in show.data.tags %}
-                         <li><a href="/categories#{{ genre | slug }}">{{ genre }}</a></li>
+                         <li><a href="/categories#{{ genre | slug }}">{{ genre | cleanup  }}</a></li>
                     {% endfor %}
                     </ul>
                 </article>
@@ -255,7 +261,7 @@ defaultTags:
                         <h3>Genres</h3>
                         <ul class="genre">
                         {% for genre in show.data.tags %}
-                             <li><a href="/categories#{{ genre | slug }}">{{ genre }}</a></li>
+                             <li><a href="/categories#{{ genre | slug }}">{{ genre | cleanup  }}</a></li>
                         {% endfor %}
                         </ul>
                     </article>
@@ -279,7 +285,7 @@ defaultTags:
                     <h3>Genres</h3>
                     <ul class="genre">
                     {% for genre in show.data.tags %}
-                        <li><a href="/categories/#{{ genre | slug }}">{{ genre }}</a></li>
+                        <li><a href="/categories/#{{ genre | slug }}">{{ genre | cleanup  }}</a></li>
                     {% endfor %}
                     </ul>
                 </article>
@@ -303,7 +309,7 @@ defaultTags:
                     <h3>Genres</h3>
                     <ul class="genre">
                     {% for genre in show.data.tags %}
-                        <li><a href="/categories/#{{ genre | slug }}">{{ genre }}</a></li>
+                        <li><a href="/categories/#{{ genre | slug }}">{{ genre | cleanup  }}</a></li>
                     {% endfor %}
                     </ul>
                 </article>
@@ -327,7 +333,7 @@ defaultTags:
                     <h3>Genres</h3>
                     <ul class="genre">
                     {% for genre in show.data.tags %}
-                        <li><a href="/categories/#{{ genre | slug }}">{{ genre }}</a></li>
+                        <li><a href="/categories/#{{ genre | slug }}">{{ genre | cleanup  }}</a></li>
                     {% endfor %}
                     </ul>
                 </article>
@@ -351,7 +357,7 @@ defaultTags:
                     <h3>Genres</h3>
                     <ul class="genre">
                     {% for genre in show.data.tags %}
-                        <li><a href="/categories/#{{ genre | slug }}">{{ genre }}</a></li>
+                        <li><a href="/categories/#{{ genre | slug }}">{{ genre | cleanup }}</a></li>
                     {% endfor %}
                     </ul>
                 </article>
@@ -376,7 +382,7 @@ defaultTags:
                     <h3>Genres</h3>
                     <ul class="genre">
                     {% for genre in show.data.tags %}
-                        <li><a href="/categories/#{{ genre | slug }}">{{ genre }}</a></li>
+                        <li><a href="/categories/#{{ genre | slug }}">{{ genre | cleanup }}</a></li>
                     {% endfor %}
                     </ul>
                 </article>

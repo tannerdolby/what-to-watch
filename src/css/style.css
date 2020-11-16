@@ -278,3 +278,47 @@ footer nav ul li a:hover {
 .four-oh-four a {
     color: #19C2FA !important;
 }
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    max-width: 80ch;
+    margin: 0 auto;
+}
+
+.category-list li {
+    margin-right: .75rem;
+    padding: 1rem 0;
+}
+
+.category-list li a {
+    border: .1rem solid var(--plum);
+    text-decoration: none;
+    background: var(--plum);
+    padding: .5rem .75rem;
+    color: var(--yellow-green);
+}
+
+.category-list li a:hover {
+    background: var(--yellow-green);
+    color: var(--plum);
+}
+
+.sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+#search-bar {
+    padding: .75rem .5rem;
+    width: 50ch;
+    border: .125rem solid var(--plum);
+}
