@@ -15,6 +15,16 @@ module.exports = function(eleventyConfig) {
         "njk"
     ]);
 
+    // filter for genre hrefs
+    eleventyConfig.addFilter("lower", function(str) {
+        return str.toLowerCase();
+    });
+
+    // filter to fix genre with underscore
+    eleventyConfig.addFilter("cleanup", function(str) {
+        return str.replace("_", " ");
+    })
+
     // Create custom collection for shows
     eleventyConfig.addCollection("shows", function(collection) {
         return collection.getFilteredByGlob("src/shows/*.md");
