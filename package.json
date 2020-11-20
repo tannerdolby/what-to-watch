@@ -5,7 +5,8 @@
   "main": ".eleventy.js",
   "dependencies": {
     "@11ty/eleventy": "^0.11.0",
-    "clean-css": "^4.2.3"
+    "clean-css": "^4.2.3",
+    "eleventy-plugin-metagen": "0.0.1"
   },
   "devDependencies": {},
   "scripts": {

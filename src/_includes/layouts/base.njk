@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="description" content="What to Watch, a collection of TV shows and series on popular streaming services.">
-        <title>{{ title }}</title>
+        {% metagen 
+            title="What to Watch",
+            desc="What to Watch. A collection of TV shows and series on popular streaming services.",
+            url="https://whatt2watch.netlify.app/",
+            img="https://whatt2watch.netlify.app/images/what-to-watch.png",
+            img_alt="A photo of the whattowatch website home page",
+            twitterHandle="@tannerdolby",
+            name="Tanner Dolby"
+        %}
         <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -48,7 +52,7 @@
                 <h3>Genres</h3>
                 <ul class="genre">
                 {% for genre in show.data.tags %}
-                    <li><a href="/categories#{{ genre | slug }}">{{ genre | cleanup }}</a></li>
+                    <li><a href="/categories#{{ genre | cleanup }}">{{ genre | cleaner }}</a></li>
                 {% endfor %}
                 </ul>
             </article>

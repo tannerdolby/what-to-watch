@@ -1,5 +1,6 @@
 
 const CleanCSS = require("clean-css");
+const metagen = require("eleventy-plugin-metagen");
 
 module.exports = function(eleventyConfig) {
 
@@ -7,6 +8,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("cssmin", function(css) {
         return new CleanCSS({}).minify(css).styles;
     });
+
+    eleventyConfig.addPlugin(metagen);
 
     markdownTemplateEngine: "njk";
 
@@ -22,8 +25,12 @@ module.exports = function(eleventyConfig) {
 
     // filter to fix genre with underscore
     eleventyConfig.addFilter("cleanup", function(str) {
-        return str.replace("_", " ");
-    })
+        return str.toLowerCase().replace(" ", "-");
+    });
+
+    eleventyConfig.addFilter("cleaner", function(str) {
+        return str.replace("_", "-");
+    });
 
     // Create custom collection for shows
     eleventyConfig.addCollection("shows", function(collection) {
