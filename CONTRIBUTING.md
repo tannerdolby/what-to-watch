@@ -4,8 +4,9 @@ If your new to open source, welcome! This contributing file will provide a more 
 
 ## Local Setup
 
-1. Clone your fork of the project with `git clone https://github.com/your-user/what-to-watch.git`
-2. Change directory into the cloned project with `cd what-to-watch`
+1. Fork this project to your users organization
+2. Clone repo: `git clone git@github.com:your-username/what-to-watch.git`
+3. Change directory into the cloned project with `cd what-to-watch`
 3. Open VS Code (or any text editor) and open the `/what-to-watch/` project.
 4. Install project dependencies `npm install`
 5. Build command that generates the static files in the build output directory `_site`.

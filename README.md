@@ -16,8 +16,6 @@ Have a look at [CONTRIBUTING.md](https://github.com/tannerdolby/what-to-watch/bl
 ### How to add a show
 Add your favorite TV show/series data as an object to the global data file `shows.json` to the `/shows/` directory. You can find the required data from any site but I recommend having a look at [Wiki - Netflix list of shows](https://en.wikipedia.org/wiki/List_of_Netflix_original_programming) or [Wiki - Hulu list of shows](https://en.wikipedia.org/wiki/List_of_Hulu_original_programming). 
 
-Please see [CONTRIBUTING.md](https://github.com/tannerdolby/what-to-watch/blob/master/CONTRIBUTING.md) before submitting a PR or making changes in the project.
-
 Example: show data as front matter using [YAML](https://yaml.org/spec/1.2/spec.html) syntax
 
 filename: `stranger-things.md`
