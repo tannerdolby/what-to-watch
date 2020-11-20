@@ -55,7 +55,7 @@
                 <h3>Genres</h3>
                 <ul class="genre">
                 {% for genre in show.data.tags %}
-                    <li><a href="/categories#{{ genre | slug }}">{{ genre | cleanup }}</a></li>
+                    <li><a href="/categories#{{ genre | cleaner }}">{{ genre | cleaner }}</a></li>
                 {% endfor %}
                 </ul>
             </article>

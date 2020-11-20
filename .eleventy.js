@@ -29,7 +29,7 @@ module.exports = function(eleventyConfig) {
     });
 
     eleventyConfig.addFilter("cleaner", function(str) {
-        return str.replace("_", "-");
+        return str.toLowerCase().replace("_", "-");
     });
 
     // Create custom collection for shows
