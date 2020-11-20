@@ -4,9 +4,9 @@
   "description": "A collection of enjoyable tv shows and series. Built with 11ty",
   "main": ".eleventy.js",
   "dependencies": {
-    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy": "^0.11.1",
     "clean-css": "^4.2.3",
-    "eleventy-plugin-metagen": "0.0.1"
+    "eleventy-plugin-metagen": "^1.0.2"
   },
   "devDependencies": {},
   "scripts": {
