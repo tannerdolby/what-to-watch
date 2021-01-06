@@ -37,6 +37,12 @@ module.exports = function(eleventyConfig) {
         return collection.getFilteredByGlob("src/shows/*.md");
     });
 
+    // Get the current year to display in the footer
+    eleventyConfig.addShortcode("getYear", function() {
+        const year = new Date().getFullYear();
+        return `${year}`;
+    });
+
     // Use Passthrough File Copy to include static assets in site output _site
     eleventyConfig.addPassthroughCopy("./src/css/");
     eleventyConfig.addPassthroughCopy("./src/images/");
